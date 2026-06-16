@@ -1,0 +1,12 @@
+<svg width="500" height="500" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <rect x="8" y="8" width="484" height="484" rx="80" fill="none" stroke="#C46A48" stroke-width="1" opacity="0.2"/>
+
+  <line x1="80" y1="232" x2="140" y2="232" stroke="#C46A48" stroke-width="2.5" stroke-linecap="round" opacity="0.4"/>
+  <path d="M148 232 Q163 186 178 232 Q193 278 208 232 Q223 186 238 232 Q253 278 268 232 Q283 186 298 232 Q313 278 328 232 Q343 186 358 232 Q373 278 388 232 Q403 186 418 232 Q433 278 448 232" fill="none" stroke="#C46A48" stroke-width="7" stroke-linecap="round"/>
+  <line x1="456" y1="232" x2="516" y2="232" stroke="#C46A48" stroke-width="2.5" stroke-linecap="round" opacity="0.4"/>
+
+  <line x1="150" y1="270" x2="442" y2="270" stroke="#D9C3B3" stroke-width="0.8" opacity="0.2"/>
+
+  <text x="296" y="310" font-family="Georgia, 'Times New Roman', serif" font-size="52" font-weight="700" fill="#D9C3B3" text-anchor="middle" letter-spacing="1">modo</text>
+  <text x="296" y="348" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#C46A48" text-anchor="middle" letter-spacing="10">SÊNIOR</text>
+</svg>

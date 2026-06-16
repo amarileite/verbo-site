@@ -1,0 +1,25 @@
+<svg width="1584" height="396" viewBox="0 0 1584 396" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1584" height="396" fill="#2D2D2D"/>
+
+  <line x1="0" y1="99" x2="1584" y2="99" stroke="#C46A48" stroke-width="0.5" opacity="0.1"/>
+  <line x1="0" y1="198" x2="1584" y2="198" stroke="#C46A48" stroke-width="0.5" opacity="0.1"/>
+  <line x1="0" y1="297" x2="1584" y2="297" stroke="#C46A48" stroke-width="0.5" opacity="0.1"/>
+  <line x1="396" y1="0" x2="396" y2="396" stroke="#C46A48" stroke-width="0.5" opacity="0.06"/>
+  <line x1="792" y1="0" x2="792" y2="396" stroke="#C46A48" stroke-width="0.5" opacity="0.06"/>
+  <line x1="1188" y1="0" x2="1188" y2="396" stroke="#C46A48" stroke-width="0.5" opacity="0.06"/>
+
+  <path d="M100 198 Q160 130 220 198 Q280 266 340 198 Q400 130 460 198 Q520 266 580 198 Q640 130 700 198" fill="none" stroke="#C46A48" stroke-width="1" stroke-linecap="round" opacity="0.12"/>
+  <path d="M884 198 Q944 130 1004 198 Q1064 266 1124 198 Q1184 130 1244 198 Q1304 266 1364 198 Q1424 130 1484 198" fill="none" stroke="#C46A48" stroke-width="1" stroke-linecap="round" opacity="0.12"/>
+
+  <line x1="722" y1="198" x2="768" y2="198" stroke="#D9C3B3" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
+  <path d="M774 198 Q782 170 790 198 Q798 226 806 198 Q814 170 822 198 Q830 226 838 198 Q846 170 854 198 Q862 226 870 198 Q878 170 886 198" fill="none" stroke="#C46A48" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="892" y1="198" x2="938" y2="198" stroke="#D9C3B3" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
+
+  <text x="792" y="248" font-family="Georgia, 'Times New Roman', serif" font-size="52" font-weight="700" fill="#D9C3B3" text-anchor="middle" letter-spacing="-1">Verbo</text>
+  <text x="792" y="276" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="400" fill="#C46A48" text-anchor="middle" letter-spacing="9">MENTORIA</text>
+
+  <line x1="626" y1="260" x2="754" y2="260" stroke="#D9C3B3" stroke-width="0.7" opacity="0.2"/>
+  <line x1="830" y1="260" x2="958" y2="260" stroke="#D9C3B3" stroke-width="0.7" opacity="0.2"/>
+
+  <text x="792" y="312" font-family="Georgia, 'Times New Roman', serif" font-size="13" font-weight="400" fill="#D9C3B3" text-anchor="middle" font-style="italic" opacity="0.5" letter-spacing="1">o verbo que move.</text>
+</svg>

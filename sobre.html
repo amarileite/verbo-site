@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sobre · Verbo — Mariana Leite</title>
+<meta name="description" content="Quase 20 anos em tecnologia, startups e negócios digitais. A Verbo nasceu de uma percepção simples: trabalhar mais deixou de ser suficiente.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --grafite:#2D2D2D;--grafite-2:#262626;--grafite-3:#212121;
+    --terracota:#C46A48;--areia:#D9C3B3;--areia-clara:#F7F0EA;
+    --bordo:#702F38;--oliva:#7A8B74;
+    --texto:#E8DDD2;--texto-suave:#B7A99B;--linha:rgba(217,195,179,.14);
+    --serif:'Lora', Georgia, serif;--sans:'Instrument Sans', system-ui, sans-serif;
+    --maxw:1200px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--grafite);color:var(--texto);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  .grid-bg{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.5;
+    background-image:linear-gradient(to right,rgba(196,106,72,.045) 1px,transparent 1px),linear-gradient(to bottom,rgba(196,106,72,.045) 1px,transparent 1px);
+    background-size:clamp(120px,18vw,260px) clamp(120px,18vw,260px)}
+  .page{position:relative;z-index:1}
+
+  /* HEADER (igual à home) */
+  header{position:sticky;top:0;z-index:50;backdrop-filter:saturate(140%) blur(8px);background:rgba(45,45,45,.82);border-bottom:1px solid var(--linha)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .brand{display:flex;align-items:center;gap:13px}
+  .brand .mark{width:30px;height:30px;flex:none}
+  .brand .mark svg{display:block;width:100%;height:100%}
+  .brand .name{font-family:var(--serif);font-weight:600;font-size:22px;letter-spacing:.5px;color:var(--areia-clara)}
+  nav ul{display:flex;align-items:center;gap:34px;list-style:none}
+  nav .links a{font-size:14.5px;color:var(--texto-suave);letter-spacing:.3px;transition:color .2s}
+  nav .links a:hover,nav .links a.active{color:var(--areia-clara)}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--sans);font-size:14.5px;font-weight:500;letter-spacing:.2px;padding:11px 20px;border-radius:999px;cursor:pointer;border:1px solid transparent;transition:transform .2s,background .2s,border-color .2s}
+  .btn-primary{background:var(--terracota);color:#231414}
+  .btn-primary:hover{background:#cf7857;transform:translateY(-1px)}
+  .btn-ghost{border-color:rgba(217,195,179,.3);color:var(--areia-clara)}
+  .btn-ghost:hover{border-color:var(--areia);background:rgba(217,195,179,.06)}
+  .btn-bordo{background:var(--bordo);color:var(--areia-clara)}
+  .btn-bordo:hover{background:#82373f;transform:translateY(-1px)}
+  .btn-lg{padding:15px 30px;font-size:16px}
+  .nav-toggle{display:none;background:none;border:0;color:var(--areia-clara);cursor:pointer}
+  .mobile-menu{display:none;border-top:1px solid var(--linha);background:var(--grafite-2)}
+  .mobile-menu.open{display:block}
+  .mobile-menu a{display:block;padding:15px 28px;border-bottom:1px solid var(--linha);color:var(--areia);font-size:16px}
+  .mobile-menu .btn{margin:18px 28px;display:flex;justify-content:center}
+
+  /* HERO SOBRE */
+  .about-hero{padding:clamp(56px,8vh,96px) 0 clamp(40px,6vh,72px)}
+  .about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(36px,5vw,72px);align-items:center}
+  .about-copy .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--terracota);margin-bottom:22px}
+  .about-copy .eyebrow::before{content:"";width:34px;height:1px;background:var(--terracota);opacity:.6}
+  .about-copy h1{font-family:var(--serif);font-weight:500;font-size:clamp(34px,5.2vw,60px);line-height:1.07;letter-spacing:-.5px;color:var(--areia-clara)}
+  .about-copy h1 em{font-style:italic;color:var(--terracota)}
+  .about-copy .intro{margin-top:24px;font-size:clamp(17px,2vw,19px);color:var(--texto-suave);max-width:46ch}
+  .about-copy .name-sig{margin-top:30px;font-family:var(--serif);font-style:italic;font-size:18px;color:var(--areia);opacity:.8}
+
+  .portrait{position:relative}
+  .portrait .frame{position:relative;border-radius:22px;overflow:hidden;border:1px solid var(--linha);aspect-ratio:4/5;background:var(--grafite-2)}
+  .portrait img{width:100%;height:100%;object-fit:cover;display:block}
+  .portrait .frame::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(45,45,45,.35))}
+  .portrait .wave-badge{position:absolute;left:-14px;bottom:24px;width:96px;height:96px;background:var(--grafite);border-radius:18px;border:1px solid var(--linha);display:flex;align-items:center;justify-content:center;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .portrait .wave-badge svg{width:62px;height:62px}
+
+  /* BIO */
+  .bio{padding:clamp(50px,8vh,96px) 0}
+  .bio-inner{max-width:760px;margin:0 auto}
+  .bio p{font-size:clamp(17px,2vw,19.5px);line-height:1.74;color:var(--texto);margin-bottom:26px}
+  .bio p.lead{font-family:var(--serif);font-size:clamp(21px,2.6vw,27px);line-height:1.5;color:var(--areia-clara);font-weight:500;margin-bottom:34px}
+  .bio p em{color:var(--terracota);font-style:italic}
+  .bio .pull{font-family:var(--serif);font-style:italic;font-size:clamp(22px,3vw,30px);line-height:1.4;color:var(--terracota);
+    border-left:2px solid var(--terracota);padding:6px 0 6px 28px;margin:40px 0;}
+
+  /* faixa de credenciais / áreas */
+  .marks{border-top:1px solid var(--linha);border-bottom:1px solid var(--linha);padding:34px 0;margin-top:8px}
+  .marks ul{list-style:none;display:flex;flex-wrap:wrap;gap:14px 12px;justify-content:center}
+  .marks li{font-size:13.5px;letter-spacing:.5px;color:var(--texto-suave);border:1px solid var(--linha);border-radius:999px;padding:8px 16px}
+
+  /* DIVISOR */
+  .divider{display:flex;align-items:center;justify-content:center;padding:8px 0;opacity:.55}
+  .divider svg{width:clamp(220px,40vw,360px);height:auto;display:block}
+
+  /* DEPOIMENTOS */
+  .depo{padding:clamp(54px,8vh,100px) 0}
+  .depo-head{text-align:center;max-width:60ch;margin:0 auto}
+  .depo-head .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--terracota);margin-bottom:16px}
+  .depo-head .eyebrow::before,.depo-head .eyebrow::after{content:"";width:28px;height:1px;background:var(--terracota);opacity:.6}
+  .depo-head h2{font-family:var(--serif);font-weight:500;font-size:clamp(28px,4.2vw,46px);line-height:1.12;color:var(--areia-clara);letter-spacing:-.3px}
+  .depo-head p{margin-top:16px;color:var(--texto-suave);font-size:17px}
+
+  .depo-grid{margin-top:50px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .quote{position:relative;background:var(--grafite-2);border:1px solid var(--linha);border-radius:20px;padding:32px 28px 28px;display:flex;flex-direction:column}
+  .quote .mark{font-family:var(--serif);font-size:60px;line-height:.6;color:var(--terracota);opacity:.45;height:30px}
+  .quote .text{margin-top:14px;font-size:16px;line-height:1.62;color:var(--texto);flex:1}
+  .quote .text.placeholder{color:var(--texto-suave);font-style:italic;opacity:.7}
+  .quote .person{margin-top:24px;display:flex;align-items:center;gap:13px;border-top:1px solid var(--linha);padding-top:20px}
+  .quote .avatar{width:44px;height:44px;border-radius:999px;background:linear-gradient(135deg,var(--terracota),var(--bordo));flex:none;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:600;color:var(--areia-clara);font-size:18px}
+  .quote .who{line-height:1.3;display:flex;flex-direction:column}
+  .quote .who .n{font-weight:600;color:var(--areia-clara);font-size:15px}
+  .quote .who .r{font-size:13px;color:var(--texto-suave)}
+  .depo-note{margin-top:30px;text-align:center;font-size:13.5px;color:var(--texto-suave);opacity:.75}
+
+  /* CTA FINAL */
+  .cta-final{text-align:center;padding:clamp(64px,10vh,120px) 0}
+  .cta-final h2{font-family:var(--serif);font-weight:500;font-size:clamp(28px,4.6vw,50px);line-height:1.12;color:var(--areia-clara);max-width:20ch;margin:0 auto;letter-spacing:-.3px}
+  .cta-final h2 em{font-style:italic;color:var(--terracota)}
+  .cta-final p{margin:20px auto 0;color:var(--texto-suave);max-width:46ch;font-size:18px}
+  .cta-final .cta-row{margin-top:36px;display:flex;justify-content:center;flex-wrap:wrap;gap:14px}
+
+  /* RODAPÉ */
+  footer{border-top:1px solid var(--linha);padding:54px 0 46px;background:var(--grafite-3)}
+  .foot{display:flex;justify-content:space-between;gap:36px;flex-wrap:wrap;align-items:flex-start}
+  .foot .f-brand .name{font-family:var(--serif);font-size:24px;color:var(--areia-clara);font-weight:600}
+  .foot .f-brand .tag{font-family:var(--serif);font-style:italic;color:var(--areia);opacity:.6;margin-top:6px}
+  .foot .f-brand .who{margin-top:14px;font-size:14px;color:var(--texto-suave)}
+  .foot .f-links{display:flex;gap:60px;flex-wrap:wrap}
+  .foot .col h4{font-size:12.5px;letter-spacing:2px;text-transform:uppercase;color:var(--texto-suave);margin-bottom:14px}
+  .foot .col a{display:block;font-size:14.5px;color:var(--areia);opacity:.85;margin-bottom:9px;transition:opacity .2s}
+  .foot .col a:hover{opacity:1}
+  .foot-base{margin-top:42px;padding-top:22px;border-top:1px solid var(--linha);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--texto-suave)}
+
+  @media (max-width:920px){
+    .about-grid{grid-template-columns:1fr;gap:40px}
+    .portrait{max-width:420px;margin:0 auto;order:-1}
+    .depo-grid{grid-template-columns:1fr;max-width:520px;margin-left:auto;margin-right:auto}
+    nav .links,nav .nav-cta{display:none}
+    .nav-toggle{display:block}
+  }
+  @media (max-width:560px){.wrap{padding:0 20px}body{font-size:16px}.nav{height:64px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+  :focus-visible{outline:2px solid var(--terracota);outline-offset:3px;border-radius:4px}
+
+  .consent-bar{position:fixed;left:16px;right:16px;bottom:16px;z-index:200;max-width:680px;margin:0 auto;
+    background:var(--grafite-2);border:1px solid var(--linha);border-radius:16px;padding:20px 22px;
+    box-shadow:0 20px 50px rgba(0,0,0,.45);display:flex;gap:20px;align-items:center;flex-wrap:wrap;
+    transform:translateY(140%);transition:transform .3s ease}
+  .consent-bar.show{transform:translateY(0)}
+  .consent-bar p{font-size:14px;color:var(--texto-suave);line-height:1.55;flex:1;min-width:240px;margin:0}
+  .consent-actions{display:flex;gap:10px;flex:none}
+  .consent-btn{font-family:var(--sans);font-size:14px;font-weight:500;padding:10px 18px;border-radius:999px;cursor:pointer;border:1px solid transparent;transition:background .2s,border-color .2s}
+  .consent-btn.solid{background:var(--terracota);color:#231414}
+  .consent-btn.solid:hover{background:#cf7857}
+  .consent-btn.ghost{background:transparent;border-color:rgba(217,195,179,.3);color:var(--areia-clara)}
+  .consent-btn.ghost:hover{border-color:var(--areia)}
+  @media (max-width:520px){.consent-bar{flex-direction:column;align-items:stretch}.consent-actions{justify-content:flex-end}}
+</style>
+</head>
+<body>
+<div class="grid-bg" aria-hidden="true"></div>
+<div class="page">
+
+<!-- HEADER -->
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="Verbo — página inicial">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="200" cy="200" r="190" fill="#2D2D2D" stroke="#C46A48" stroke-width="3"/>
+          <line x1="60" y1="200" x2="108" y2="200" stroke="#D9C3B3" stroke-width="2.5" stroke-linecap="round" opacity="0.4"/>
+          <path d="M114 200 Q124 164 134 200 Q144 236 154 200 Q164 164 174 200 Q184 236 194 200 Q204 164 214 200 Q224 236 234 200 Q244 164 254 200 Q264 236 274 200 Q284 164 294 200" fill="none" stroke="#C46A48" stroke-width="5" stroke-linecap="round"/>
+          <line x1="300" y1="200" x2="348" y2="200" stroke="#D9C3B3" stroke-width="2.5" stroke-linecap="round" opacity="0.4"/>
+        </svg>
+      </span>
+      <span class="name">Verbo</span>
+    </a>
+    <nav aria-label="Principal">
+      <ul class="links">
+        <li><a href="index.html#solucoes">Soluções</a></li>
+        <li><a href="sobre.html" class="active">Sobre</a></li>
+        <li><a href="index.html#modo-senior">Modo Sênior</a></li>
+        <li><a href="index.html#contato">Contato</a></li>
+        <li class="nav-cta"><a class="btn btn-primary" href="https://formulario-mentoria.amarileite.com.br" data-evt="inscricao_click" data-loc="header">Quero me inscrever</a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" onclick="toggleMenu(this)">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html#solucoes" onclick="closeMenu()">Soluções</a>
+    <a href="sobre.html" onclick="closeMenu()">Sobre</a>
+    <a href="index.html#modo-senior" onclick="closeMenu()">Modo Sênior</a>
+    <a href="index.html#contato" onclick="closeMenu()">Contato</a>
+    <a class="btn btn-primary" href="https://formulario-mentoria.amarileite.com.br" data-evt="inscricao_click" data-loc="menu_mobile">Quero me inscrever</a>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO SOBRE -->
+<section class="about-hero">
+  <div class="wrap about-grid">
+    <div class="about-copy">
+      <span class="eyebrow">Sobre</span>
+      <h1>Crescer com autoria, <em>clareza e segurança.</em></h1>
+      <p class="intro">Quase 20 anos construindo carreira em tecnologia, startups e negócios digitais. A Verbo nasceu de uma percepção simples: trabalhar mais deixou de ser suficiente.</p>
+      <p class="name-sig">Mariana Leite · Diretora e Mentora de Carreiras</p>
+    </div>
+    <div class="portrait">
+      <div class="frame">
+        <img src="assets/mariana-retrato.jpg" alt="Mariana Leite, sorrindo, segurando um livro em frente a uma estante.">
+      </div>
+      <div class="wave-badge" aria-hidden="true">
+        <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+          <path d="M40 100 Q60 50 80 100 Q100 150 120 100 Q140 50 160 100 Q180 150 200 100 Q220 50 240 100 Q260 150 280 100 Q300 50 320 100 Q340 150 360 100" fill="none" stroke="#C46A48" stroke-width="9" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BIO -->
+<section class="bio">
+  <div class="wrap bio-inner">
+    <p class="lead">Passei quase 20 anos construindo minha carreira em empresas de tecnologia, startups e negócios digitais, atuando em áreas como vendas, operações, estratégia, crescimento e desenvolvimento de pessoas.</p>
+    <p>Trabalhei em ambientes de alta performance, participei da construção de times, produtos e operações e vivi, na prática, os desafios de crescer profissionalmente enquanto tentava descobrir quem queria me tornar ao longo do caminho.</p>
+    <p>A Verbo nasceu de uma percepção simples: trabalhar mais deixou de ser suficiente. Vi profissionais extremamente competentes permanecerem invisíveis, perderem oportunidades e duvidarem do próprio valor não por falta de capacidade, mas por não saberem transformar resultado em influência, visibilidade e posicionamento.</p>
+
+    <p class="pull">Carreira não é apenas sobre chegar no próximo cargo, mas chegar nele sem se perder no caminho.</p>
+
+    <p>Crescer continua sendo importante. Mas crescer com autoria, clareza e segurança se tornou ainda mais. Hoje ajudo profissionais da nova economia a desenvolver visão de negócio, influência e posicionamento para ocuparem os espaços que desejam sem precisar provar todos os dias que merecem estar ali.</p>
+    <p>Quando não estou trabalhando, provavelmente estou correndo, lendo sobre comportamento humano ou tentando responder as mesmas perguntas que acompanham muitos dos meus mentorados: o que realmente vale a pena levar para os próximos anos da nossa carreira?</p>
+  </div>
+
+  <div class="wrap" style="margin-top:18px">
+    <div class="marks">
+      <ul>
+        <li>Vendas</li><li>Operações</li><li>Estratégia</li><li>Crescimento</li>
+        <li>Desenvolvimento de pessoas</li><li>Tecnologia &amp; startups</li><li>Negócios digitais</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- DIVISOR -->
+<div class="wrap"><div class="divider" aria-hidden="true">
+  <svg viewBox="0 0 700 60" xmlns="http://www.w3.org/2000/svg">
+    <line x1="40" y1="30" x2="250" y2="30" stroke="#D9C3B3" stroke-width="1" stroke-linecap="round" opacity="0.3"/>
+    <path d="M258 30 Q270 6 282 30 Q294 54 306 30 Q318 6 330 30 Q342 54 354 30 Q366 6 378 30 Q390 54 402 30 Q414 6 426 30 Q438 54 450 30" fill="none" stroke="#C46A48" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="450" y1="30" x2="660" y2="30" stroke="#D9C3B3" stroke-width="1" stroke-linecap="round" opacity="0.3"/>
+  </svg>
+</div></div>
+
+<!-- DEPOIMENTOS -->
+<section class="depo" id="depoimentos">
+  <div class="wrap">
+    <div class="depo-head">
+      <span class="eyebrow">Liderança na prática</span>
+      <h2>Quem cresceu comigo</h2>
+      <p>Antes da Verbo, passei quase 20 anos formando e liderando times. Estes são relatos de profissionais que se desenvolveram sob a minha gestão.</p>
+    </div>
+
+    <div class="depo-grid trio">
+      <figure class="quote">
+        <div class="mark" aria-hidden="true">&ldquo;</div>
+        <blockquote class="text">Entrei na coordenação trabalhando com a Mari e, nove meses depois, virei gerente. Ela me deixou errar, e eu errei muito, mas sempre com feedback claro do que melhorar, sem microgerenciar e sem me fazer sentir incapaz. Aprendi que dá pra ser guiada a resultado e profundamente People ao mesmo tempo, algo que eu não achava possível. Sou a gerente que sou hoje, com os melhores times e resultados, por causa disso.</blockquote>
+        <figcaption class="person">
+          <span class="avatar" aria-hidden="true">P</span>
+          <span class="who"><span class="n">Priscila</span><span class="r">Gerente Comercial</span></span>
+        </figcaption>
+      </figure>
+
+      <figure class="quote">
+        <div class="mark" aria-hidden="true">&ldquo;</div>
+        <blockquote class="text">Foram quatro anos de muito crescimento, que compõem quem eu sou hoje. A Mari me tirou da visão de que desenvolvimento era obrigação da empresa e me ensinou a buscar conhecimento como ganho meu, da minha evolução. Aprendi a acreditar mais em mim, porque quando eu não acreditava, eu via ela acreditando. Me tornei mais estratégica, pautando percepção em dados e fatos, e aprendi a me posicionar e conquistar meu espaço independente do julgamento alheio. Os ganhos foram muito além dos técnicos. Existe muito de você em mim.</blockquote>
+        <figcaption class="person">
+          <span class="avatar" aria-hidden="true">J</span>
+          <span class="who"><span class="n">Joyce</span><span class="r">Gerente Comercial</span></span>
+        </figcaption>
+      </figure>
+
+      <figure class="quote">
+        <div class="mark" aria-hidden="true">&ldquo;</div>
+        <blockquote class="text">A Mari foi minha primeira gestora, no meu primeiro emprego. Eu tinha me formado em Engenharia Civil sabendo que não seguiria na área, mas sem saber o que queria. Ela foi a primeira pessoa a reconhecer potenciais que eu não via em mim: foi quem citou produto como caminho possível, viu no meu perfil capacidade de planejamento estratégico. Isso me levou a um job rotation, me apaixonei pela área, e é o que faço há oito anos. Ela me ajudou a me encontrar, ver meus pontos fortes e conectar isso a uma oportunidade real de carreira.</blockquote>
+        <figcaption class="person">
+          <span class="avatar" aria-hidden="true">F</span>
+          <span class="who"><span class="n">Felipe</span><span class="r">Senior Product Manager</span></span>
+        </figcaption>
+      </figure>
+
+      <!--
+      MODELO — para um novo depoimento, copie este bloco para dentro de .depo-grid,
+      troque texto, nome, cargo e a inicial do avatar.
+
+      <figure class="quote">
+        <div class="mark" aria-hidden="true">&ldquo;</div>
+        <blockquote class="text">Cole aqui a fala, na voz da pessoa.</blockquote>
+        <figcaption class="person">
+          <span class="avatar" aria-hidden="true">N</span>
+          <span class="who"><span class="n">Nome</span><span class="r">Cargo</span></span>
+        </figcaption>
+      </figure>
+      -->
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final" id="contato">
+  <div class="wrap">
+    <h2>Vamos descobrir <em>o que vale a pena levar adiante?</em></h2>
+    <p>Conta onde você está e pra onde quer ir. A inscrição é o primeiro passo da conversa.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary btn-lg" href="https://formulario-mentoria.amarileite.com.br" data-evt="inscricao_click" data-loc="cta_final">Quero me inscrever</a>
+      <a class="btn btn-ghost btn-lg" href="index.html#solucoes" data-evt="ver_solucoes" data-loc="cta_final">Ver as soluções</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- RODAPÉ -->
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div class="f-brand">
+        <div class="name">Verbo</div>
+        <div class="tag">o verbo que move.</div>
+        <div class="who">Mariana Leite · Diretora e Mentora de Carreiras</div>
+      </div>
+      <div class="f-links">
+        <div class="col">
+          <h4>Navegação</h4>
+          <a href="index.html#solucoes">Soluções</a>
+          <a href="sobre.html">Sobre</a>
+          <a href="index.html#modo-senior">Modo Sênior</a>
+        </div>
+        <div class="col">
+          <h4>Contato</h4>
+          <a href="https://formulario-mentoria.amarileite.com.br">Inscrição</a>
+          <a href="mailto:contato@amarileite.com.br">contato@amarileite.com.br</a>
+        </div>
+        <div class="col">
+          <h4>Redes</h4>
+          <a href="https://instagram.com/verbo.executiva" data-evt="rede_social_click" data-loc="instagram">Instagram</a>
+          <a href="https://www.linkedin.com/in/amarileite" data-evt="rede_social_click" data-loc="linkedin">LinkedIn</a>
+          <a href="https://substack.com/@amarileite" data-evt="rede_social_click" data-loc="substack">Substack</a>
+          <a href="https://tiktok.com/@amarileite" data-evt="rede_social_click" data-loc="tiktok">TikTok</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>© 2026 Verbo · Mariana Leite</span>
+      <span>Osasco, SP</span>
+    </div>
+  </div>
+</footer>
+
+</div>
+<script>
+  function toggleMenu(btn){var m=document.getElementById('mobileMenu');var open=m.classList.toggle('open');btn.setAttribute('aria-expanded',open);}
+  function closeMenu(){document.getElementById('mobileMenu').classList.remove('open');document.querySelector('.nav-toggle').setAttribute('aria-expanded','false');}
+</script>
+<script src="assets/analytics.js"></script>
+</body>
+</html>
