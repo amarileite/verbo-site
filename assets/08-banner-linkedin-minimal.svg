@@ -1,0 +1,16 @@
+<svg width="1584" height="396" viewBox="0 0 1584 396" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1584" height="396" fill="#2D2D2D"/>
+
+  <line x1="0" y1="99" x2="1584" y2="99" stroke="#C46A48" stroke-width="0.5" opacity="0.08"/>
+  <line x1="0" y1="198" x2="1584" y2="198" stroke="#C46A48" stroke-width="0.5" opacity="0.08"/>
+  <line x1="0" y1="297" x2="1584" y2="297" stroke="#C46A48" stroke-width="0.5" opacity="0.08"/>
+  <line x1="396" y1="0" x2="396" y2="396" stroke="#C46A48" stroke-width="0.5" opacity="0.05"/>
+  <line x1="792" y1="0" x2="792" y2="396" stroke="#C46A48" stroke-width="0.5" opacity="0.05"/>
+  <line x1="1188" y1="0" x2="1188" y2="396" stroke="#C46A48" stroke-width="0.5" opacity="0.05"/>
+
+  <line x1="672" y1="178" x2="726" y2="178" stroke="#C46A48" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+  <path d="M733 178 Q744 144 755 178 Q766 212 777 178 Q788 144 799 178 Q810 212 821 178 Q832 144 843 178 Q854 212 865 178 Q876 144 887 178 Q898 212 909 178 Q920 144 931 178 Q942 212 953 178" fill="none" stroke="#C46A48" stroke-width="4.5" stroke-linecap="round"/>
+  <line x1="960" y1="178" x2="1014" y2="178" stroke="#C46A48" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+
+  <text x="792" y="240" font-family="Georgia, 'Times New Roman', serif" font-size="22" font-weight="400" fill="#D9C3B3" text-anchor="middle" font-style="italic" letter-spacing="2" opacity="0.7">o verbo que move.</text>
+</svg>
