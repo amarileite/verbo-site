@@ -201,7 +201,7 @@ a { color: inherit; text-decoration: none; }
     <li><a href="/mentoria-individual.html" class="active">Mentoria</a></li>
     <li><a href="/analise-pontual.html">Análise Pontual</a></li>
     <li><a href="/empresas.html">Empresas</a></li>
-    <li><a href="https://chat.whatsapp.com/FV9qzKIUvETGwFtXOs90bW" target="_blank" rel="noopener" class="nav-cta">Modo Sênior</a></li>
+    <li><a href="https://chat.whatsapp.com/FV9qzKIUvETGwFtXOs90bW" target="_blank" rel="noopener" class="nav-cta" onclick="gtag('event', 'whatsapp_click', {'event_category': 'engagement', 'event_label': 'modo_senior'})">Modo Sênior</a></li>
   </ul>
   <button class="nav-hamburger" id="hamburger" aria-label="Menu">
     <span></span><span></span><span></span>
@@ -214,7 +214,7 @@ a { color: inherit; text-decoration: none; }
   <a href="/mentoria-individual.html">Mentoria</a>
   <a href="/analise-pontual.html">Análise Pontual</a>
   <a href="/empresas.html">Empresas</a>
-  <a href="https://chat.whatsapp.com/FV9qzKIUvETGwFtXOs90bW" target="_blank" rel="noopener">Modo Sênior</a>
+  <a href="https://chat.whatsapp.com/FV9qzKIUvETGwFtXOs90bW" target="_blank" rel="noopener" onclick="gtag('event', 'whatsapp_click', {'event_category': 'engagement', 'event_label': 'modo_senior'})">Modo Sênior</a>
 </div>
 
 <!-- HERO -->
@@ -224,7 +224,7 @@ a { color: inherit; text-decoration: none; }
     <h1>O ciclo de mentoria<br>que acompanha<br>quem você <em>quer ser.</em></h1>
     <p class="hero-lead">Para especialistas e líderes que querem crescer com estratégia, posicionamento e clareza — sem sacrificar o que os faz ser quem são.</p>
     <div class="hero-actions">
-      <a href="mailto:contato@amarileite.com.br" class="btn-terracota">Conversar sobre fit</a>
+      <a href="mailto:contato@amarileite.com.br" class="btn-terracota" onclick="gtag('event', 'contact_click', {'event_category': 'engagement', 'event_label': 'cta_conversar_fit'})">Conversar sobre fit</a>
       <a href="/sobre.html" class="btn-ghost">Quem é a Mari →</a>
     </div>
   </div>
@@ -331,7 +331,7 @@ a { color: inherit; text-decoration: none; }
     <div class="faq-sticky">
       <p class="section-label">Perguntas frequentes</p>
       <h2 class="section-title">O que<br>você precisa<br><em>saber</em></h2>
-      <p style="margin-top:1.5rem;font-size:0.9rem;line-height:1.8;color:rgba(45,45,45,0.65);">Algo que não está aqui? Fale diretamente com a Mari em <a href="mailto:contato@amarileite.com.br" style="color:var(--terracota);">contato@amarileite.com.br</a></p>
+      <p style="margin-top:1.5rem;font-size:0.9rem;line-height:1.8;color:rgba(45,45,45,0.65);">Algo que não está aqui? Fale diretamente com a Mari em <a href="mailto:contato@amarileite.com.br" style="color:var(--terracota);" onclick="gtag('event', 'contact_click', {'event_category': 'engagement', 'event_label': 'email_mentoria'})">contato@amarileite.com.br</a></p>
     </div>
     <div class="faq-list">
       <div class="faq-item">
@@ -362,7 +362,7 @@ a { color: inherit; text-decoration: none; }
 <section class="cta">
   <h2>O primeiro passo<br>é uma conversa.</h2>
   <p>Sem formulário de 20 perguntas. Sem compromisso. Uma troca para entender se faz sentido seguir juntos.</p>
-  <a href="mailto:contato@amarileite.com.br" class="btn-white">Falar com a Mari</a>
+  <a href="mailto:contato@amarileite.com.br" class="btn-white" onclick="gtag('event', 'contact_click', {'event_category': 'engagement', 'event_label': 'cta_falar_mari_mentoria'})">Falar com a Mari</a>
 </section>
 
 <!-- FOOTER -->
@@ -380,7 +380,7 @@ a { color: inherit; text-decoration: none; }
           <li><a href="/mentoria-individual.html">Verbo Mentoria</a></li>
           <li><a href="/analise-pontual.html">Verbo Foco</a></li>
           <li><a href="/empresas.html">Para Empresas</a></li>
-          <li><a href="https://chat.whatsapp.com/FV9qzKIUvETGwFtXOs90bW" target="_blank" rel="noopener">Modo Sênior</a></li>
+          <li><a href="https://chat.whatsapp.com/FV9qzKIUvETGwFtXOs90bW" target="_blank" rel="noopener" onclick="gtag('event', 'whatsapp_click', {'event_category': 'engagement', 'event_label': 'modo_senior'})">Modo Sênior</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -393,7 +393,7 @@ a { color: inherit; text-decoration: none; }
       <div class="footer-col">
         <h4>Contato</h4>
         <ul>
-          <li><a href="mailto:contato@amarileite.com.br">contato@amarileite.com.br</a></li>
+          <li><a href="mailto:contato@amarileite.com.br" onclick="gtag('event', 'contact_click', {'event_category': 'engagement', 'event_label': 'email_mentoria'})">contato@amarileite.com.br</a></li>
           <li><a href="https://www.linkedin.com/in/amarileite/" target="_blank" rel="noopener">LinkedIn</a></li>
           <li><a href="https://www.instagram.com/amarileite_/" target="_blank" rel="noopener">Instagram</a></li>
         </ul>
@@ -430,6 +430,28 @@ const observer = new IntersectionObserver(entries => {
 document.querySelectorAll('.check-card, .step-card').forEach(el => {
   el.style.opacity='0'; el.style.transform='translateY(16px)'; el.style.transition='opacity 0.5s ease, transform 0.5s ease';
   observer.observe(el);
+});
+</script>
+
+<script>
+// FAQ click tracking
+document.querySelectorAll('.faq-q').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var text = this.textContent.trim().substring(0, 50);
+    gtag('event', 'faq_open', {'event_category': 'engagement', 'event_label': text});
+  });
+});
+
+// Scroll depth tracking (25%, 50%, 75%, 100%)
+var scrollMarks = {25: false, 50: false, 75: false, 100: false};
+window.addEventListener('scroll', function() {
+  var pct = Math.round((window.scrollY + window.innerHeight) / document.body.scrollHeight * 100);
+  [25, 50, 75, 100].forEach(function(mark) {
+    if (pct >= mark && !scrollMarks[mark]) {
+      scrollMarks[mark] = true;
+      gtag('event', 'scroll_depth', {'event_category': 'engagement', 'event_label': mark + '%'});
+    }
+  });
 });
 </script>
 </body>

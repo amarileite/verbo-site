@@ -954,7 +954,7 @@ footer {
     <li><a href="/analise-pontual" aria-current="page">Verbo Foco</a></li>
     <li><a href="/empresas">Para Empresas</a></li>
     <li><a href="/sobre">Sobre</a></li>
-    <li><a href="mailto:contato@amarileite.com.br" class="nav-cta">Falar com Mari</a></li>
+    <li><a href="mailto:contato@amarileite.com.br" class="nav-cta" onclick="gtag('event', 'contact_click', {'event_category': 'engagement', 'event_label': 'nav_falar_mari'})">Falar com Mari</a></li>
   </ul>
   <button class="hamburger" id="hamburger" aria-label="Menu">
     <span></span><span></span><span></span>
@@ -966,7 +966,7 @@ footer {
   <a href="/analise-pontual">Verbo Foco</a>
   <a href="/empresas">Para Empresas</a>
   <a href="/sobre">Sobre Mari</a>
-  <a href="mailto:contato@amarileite.com.br">Falar com Mari</a>
+  <a href="mailto:contato@amarileite.com.br" onclick="gtag('event', 'contact_click', {'event_category': 'engagement', 'event_label': 'email_analise_pontual'})">Falar com Mari</a>
 </div>
 
 <!-- ─── HERO ─────────────────────────────────────────────── -->
@@ -988,7 +988,7 @@ footer {
       <span class="badge"><span class="badge-dot"></span>Presencial SP ou online</span>
       <span class="badge"><span class="badge-dot"></span>Sem programa</span>
     </div>
-    <a href="mailto:contato@amarileite.com.br?subject=Verbo Foco — Análise Pontual" class="hero-cta">
+    <a href="mailto:contato@amarileite.com.br?subject=Verbo Foco — Análise Pontual" class="hero-cta" onclick="gtag('event', 'contact_click', {'event_category': 'engagement', 'event_label': 'cta_hero_analise_pontual'})">
       Quero marcar meu encontro
       <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
@@ -1207,7 +1207,7 @@ footer {
             <h3>Como agendo e pago?</h3>
             <span class="faq-icon">+</span>
           </summary>
-          <p>Entre em contato por email — <a href="mailto:contato@amarileite.com.br" style="color:var(--terracota)">contato@amarileite.com.br</a> — descrevendo brevemente a decisão que precisa resolver. Alinhamos disponibilidade, formato e investimento na sequência.</p>
+          <p>Entre em contato por email — <a href="mailto:contato@amarileite.com.br" style="color:var(--terracota)" onclick="gtag('event', 'contact_click', {'event_category': 'engagement', 'event_label': 'email_analise_pontual'})">contato@amarileite.com.br</a> — descrevendo brevemente a decisão que precisa resolver. Alinhamos disponibilidade, formato e investimento na sequência.</p>
         </details>
       </div>
     </div>
@@ -1218,7 +1218,7 @@ footer {
 <section class="cta-section">
   <h2 class="cta-title">Você sabe qual é a decisão.<br>Falta a conversa certa.</h2>
   <p class="cta-sub">Um encontro com Mariana Leite. Sem programa, sem compromisso além do que precisa agora.</p>
-  <a href="mailto:contato@amarileite.com.br?subject=Verbo Foco — Análise Pontual" class="cta-btn">
+  <a href="mailto:contato@amarileite.com.br?subject=Verbo Foco — Análise Pontual" class="cta-btn" onclick="gtag('event', 'contact_click', {'event_category': 'engagement', 'event_label': 'cta_bottom_analise_pontual'})">
     Entrar em contato
     <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
   </a>
@@ -1243,14 +1243,14 @@ footer {
       <h4>Empresa</h4>
       <ul>
         <li><a href="/sobre">Sobre Mari</a></li>
-        <li><a href="https://substack.com/@amarileite" target="_blank" rel="noopener">Newsletter</a></li>
+        <li><a href="https://substack.com/@amarileite" target="_blank" rel="noopener" onclick="gtag('event', 'social_click', {'event_category': 'engagement', 'event_label': 'substack'})">Newsletter</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4>Contato</h4>
       <ul>
-        <li><a href="mailto:contato@amarileite.com.br">contato@amarileite.com.br</a></li>
-        <li><a href="https://www.linkedin.com/in/marianaleitebr/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="mailto:contato@amarileite.com.br" onclick="gtag('event', 'contact_click', {'event_category': 'engagement', 'event_label': 'email_analise_pontual'})">contato@amarileite.com.br</a></li>
+        <li><a href="https://www.linkedin.com/in/marianaleitebr/" target="_blank" rel="noopener" onclick="gtag('event', 'social_click', {'event_category': 'engagement', 'event_label': 'linkedin'})">LinkedIn</a></li>
       </ul>
     </div>
   </div>
