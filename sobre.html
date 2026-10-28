@@ -256,6 +256,25 @@ a { color: inherit; text-decoration: none; }
   transition: box-shadow 0.3s, transform 0.3s;
 }
 .midia-card:hover { box-shadow: 0 8px 30px rgba(45,45,45,0.08); transform: translateY(-3px); }
+.midia-card--destaque { border-color: var(--terracota); border-width: 2px; }
+.midia-img-wrap {
+  width: calc(100% + 4rem);
+  margin: -2rem -2rem 1.5rem -2rem;
+  overflow: hidden;
+  border-radius: 2px 2px 0 0;
+  max-height: 180px;
+}
+.midia-img { width: 100%; height: 180px; object-fit: cover; object-position: center 30%; display: block; }
+.midia-quote-bar {
+  font-family: var(--f-display);
+  font-style: italic;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--terracota);
+  border-left: 2px solid var(--terracota);
+  padding-left: 0.75rem;
+  margin-top: auto;
+}
 .midia-type {
   font-size: 0.65rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
   color: var(--white); background: var(--oliva); padding: 0.3rem 0.7rem;
@@ -376,7 +395,7 @@ a { color: inherit; text-decoration: none; }
     <p class="hero-sub">20 anos de carreira, 13 como líder. Construindo, liderando e escalando operações em grandes empresas de tecnologia. Agora, ajudando profissionais a fazer o mesmo — com identidade intacta.</p>
     <div class="hero-links">
       <a href="/mentoria-individual.html" class="btn-areia">Ver a mentoria</a>
-      <a href="mailto:contato@amarileite.com.br" class="btn-ghost-light" onclick="gtag('event', 'contact_click', {'event_category': 'engagement', 'event_label': 'cta_falar_mari_sobre'})">Falar com a Mari</a>
+      <a href="https://formulario-mentoria.amarileite.com.br" target="_blank" rel="noopener" class="btn-ghost-light" onclick="gtag('event', 'contact_click', {'event_category': 'engagement', 'event_label': 'cta_falar_mari_sobre'})">Falar com a Mari</a>
     </div>
   </div>
 </section>
@@ -509,10 +528,14 @@ a { color: inherit; text-decoration: none; }
         <p>Carreira, liderança e o futuro do trabalho. Mariana fala sobre a jornada do especialista que vira líder e o que muda nesse processo.</p>
         <a href="https://www.youtube.com/watch?v=Ttf6zd9FM80" target="_blank" rel="noopener" class="midia-link" onclick="gtag('event', 'video_click', {'event_category': 'engagement', 'event_label': 'youtube_ted_minder'})">Ouvir episódio →</a>
       </div>
-      <div class="midia-card">
+      <div class="midia-card midia-card--destaque">
+        <div class="midia-img-wrap">
+          <img src="assets/money-times-eletromidia.jpg" alt="Mariana Leite no Money Times — Eletromidia" class="midia-img" loading="lazy">
+        </div>
         <span class="midia-type">Imprensa</span>
         <h3>Money Times</h3>
-        <p>Com 20 anos de carreira, Mariana Leite liderou operações com quase 1 milhão de vidas e criou o Modo Sênior para profissionais em transição.</p>
+        <p>Com 20 anos de carreira, Mariana Leite liderou operações com quase 1 milhão de vidas e criou o Modo Sênior para profissionais em transição de carreira executiva.</p>
+        <div class="midia-quote-bar">Veiculado na Eletromidia em outubro de 2026</div>
       </div>
     </div>
   </div>
@@ -560,7 +583,7 @@ a { color: inherit; text-decoration: none; }
       </div>
     </div>
     <div class="footer-bottom">
-      <p class="footer-copy">© 2025 Verbo Educação Executiva. Todos os direitos reservados.</p>
+      <p class="footer-copy">© 2026 Verbo Educação Executiva. Todos os direitos reservados.</p>
     </div>
   </div>
 </footer>

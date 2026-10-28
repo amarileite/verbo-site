@@ -113,10 +113,14 @@ a { color: inherit; text-decoration: none; }
   font-size: 1.1rem;
   font-weight: 600;
   letter-spacing: 0.04em;
-  color: var(--grafite);
+  color: var(--areia);
+  transition: color 0.3s;
 }
 .nav-logo span {
   color: var(--terracota);
+}
+.nav.scrolled .nav-logo {
+  color: var(--grafite);
 }
 .nav-links {
   display: flex;
@@ -261,12 +265,15 @@ a { color: inherit; text-decoration: none; }
 .hero-right {
   position: relative;
   overflow: hidden;
+  background: var(--grafite);
+  min-height: 100vh;
 }
 .hero-photo {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center top;
+  display: block;
 }
 .hero-tag {
   position: absolute;
@@ -1033,7 +1040,7 @@ a { color: inherit; text-decoration: none; }
   </div>
   <div class="hero-right">
     <img src="/assets/mari-hero.jpg" alt="Mariana Leite — fundadora da Verbo Educação Executiva" class="hero-photo" loading="eager">
-    <span class="hero-tag">Ex-Diretora Comercial · iFood</span>
+    <span class="hero-tag">Ex-Sócia e Diretora Comercial · iFood</span>
   </div>
 </section>
 
@@ -1267,7 +1274,7 @@ a { color: inherit; text-decoration: none; }
 <section class="cta-final">
   <h2 class="section-title" style="font-size:clamp(2rem,4vw,3.2rem);">Pronto para a<br>próxima conversa?</h2>
   <p>O primeiro passo é uma conversa. Sem compromisso, sem formulário de 20 perguntas.</p>
-  <a href="mailto:contato@amarileite.com.br" class="btn-cta-white" onclick="gtag('event', 'contact_click', {'event_category': 'engagement', 'event_label': 'cta_falar_com_mari'})">Falar com a Mari</a>
+  <a href="https://formulario-mentoria.amarileite.com.br" target="_blank" rel="noopener" class="btn-cta-white" onclick="gtag('event', 'contact_click', {'event_category': 'engagement', 'event_label': 'cta_falar_com_mari'})">Falar com a Mari</a>
 </section>
 
 <!-- FOOTER -->
@@ -1299,13 +1306,14 @@ a { color: inherit; text-decoration: none; }
         <h4>Contato</h4>
         <ul>
           <li><a href="mailto:contato@amarileite.com.br" onclick="gtag('event', 'contact_click', {'event_category': 'engagement', 'event_label': 'email_generico'})">contato@amarileite.com.br</a></li>
-          <li><a href="https://www.linkedin.com/in/amarileite/" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><a href="https://www.instagram.com/amarileite_/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.linkedin.com/in/amarileite/" target="_blank" rel="noopener" onclick="gtag('event', 'social_click', {'event_category': 'engagement', 'event_label': 'linkedin'})">LinkedIn</a></li>
+          <li><a href="https://www.instagram.com/amarileite_/" target="_blank" rel="noopener" onclick="gtag('event', 'social_click', {'event_category': 'engagement', 'event_label': 'instagram'})">Instagram</a></li>
+          <li><a href="https://www.youtube.com/@amarileite" target="_blank" rel="noopener" onclick="gtag('event', 'social_click', {'event_category': 'engagement', 'event_label': 'youtube'})">YouTube</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p class="footer-copy">© 2025 Verbo Educação Executiva. Todos os direitos reservados.</p>
+      <p class="footer-copy">© 2026 Verbo Educação Executiva. Todos os direitos reservados.</p>
     </div>
   </div>
 </footer>

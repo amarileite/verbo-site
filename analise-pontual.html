@@ -121,11 +121,13 @@ nav {
   font-size: 1.2rem;
   font-weight: 500;
   letter-spacing: 0.02em;
-  color: var(--grafite);
+  color: var(--areia);
+  transition: color 0.3s;
   line-height: 1;
 }
 
 .nav-logo span { color: var(--terracota); }
+.nav.scrolled .nav-logo { color: var(--grafite); }
 
 .nav-links {
   display: flex;
@@ -988,7 +990,7 @@ footer {
       <span class="badge"><span class="badge-dot"></span>Presencial SP ou online</span>
       <span class="badge"><span class="badge-dot"></span>Sem programa</span>
     </div>
-    <a href="mailto:contato@amarileite.com.br?subject=Verbo Foco — Análise Pontual" class="hero-cta" onclick="gtag('event', 'contact_click', {'event_category': 'engagement', 'event_label': 'cta_hero_analise_pontual'})">
+    <a href="https://formulario-mentoria.amarileite.com.br" target="_blank" rel="noopener" class="hero-cta" onclick="gtag('event', 'contact_click', {'event_category': 'engagement', 'event_label': 'cta_hero_analise_pontual'})">
       Quero marcar meu encontro
       <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
@@ -1059,6 +1061,13 @@ footer {
         <div class="moment-content">
           <h3 class="moment-title">Decisão sobre negócio próprio</h3>
           <p class="moment-desc">Abrir, fechar, pivotar ou entrar como sócio. Decisões que não se resolvem com pesquisa, mas com diálogo estruturado.</p>
+        </div>
+      </div>
+      <div class="moment-item">
+        <div class="moment-num">06</div>
+        <div class="moment-content">
+          <h3 class="moment-title">Como ter uma conversa difícil</h3>
+          <p class="moment-desc">Com o seu chefe, com um sócio, com um subordinado. Você sabe que precisa ter essa conversa — e quer entrar preparado.</p>
         </div>
       </div>
     </div>
@@ -1218,7 +1227,7 @@ footer {
 <section class="cta-section">
   <h2 class="cta-title">Você sabe qual é a decisão.<br>Falta a conversa certa.</h2>
   <p class="cta-sub">Um encontro com Mariana Leite. Sem programa, sem compromisso além do que precisa agora.</p>
-  <a href="mailto:contato@amarileite.com.br?subject=Verbo Foco — Análise Pontual" class="cta-btn" onclick="gtag('event', 'contact_click', {'event_category': 'engagement', 'event_label': 'cta_bottom_analise_pontual'})">
+  <a href="https://formulario-mentoria.amarileite.com.br" target="_blank" rel="noopener" class="cta-btn" onclick="gtag('event', 'contact_click', {'event_category': 'engagement', 'event_label': 'cta_bottom_analise_pontual'})">
     Entrar em contato
     <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
   </a>

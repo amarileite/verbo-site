@@ -130,11 +130,13 @@ nav {
   font-size: 1.2rem;
   font-weight: 500;
   letter-spacing: 0.02em;
-  color: var(--grafite);
+  color: var(--areia);
+  transition: color 0.3s;
   line-height: 1;
 }
 
 .nav-logo span { color: var(--terracota); }
+.nav.scrolled .nav-logo { color: var(--grafite); }
 
 .nav-links {
   display: flex;
@@ -1053,7 +1055,7 @@ footer {
         <span class="stat-label">Empresas de grande porte</span>
       </div>
     </div>
-    <a href="mailto:contato@amarileite.com.br?subject=Proposta para empresa" class="hero-cta" onclick="gtag('event', 'contact_click', {'event_category': 'engagement', 'event_label': 'cta_hero_empresas'})">
+    <a href="https://formulario-mentoria.amarileite.com.br" target="_blank" rel="noopener" class="hero-cta" onclick="gtag('event', 'contact_click', {'event_category': 'engagement', 'event_label': 'cta_hero_empresas'})">
       Solicitar proposta
       <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
@@ -1214,7 +1216,7 @@ footer {
       <p class="b2b-label">Além dos workshops</p>
       <h2 class="b2b-title">Mentoria executiva individual para lideranças da empresa</h2>
       <p class="b2b-body">Empresas que querem desenvolver executivos-chave de forma individualizada contratam ciclos de mentoria B2B — o programa é desenhado em conjunto com RH e o executivo.</p>
-      <a href="mailto:contato@amarileite.com.br?subject=Mentoria B2B" class="b2b-cta" onclick="gtag('event', 'contact_click', {'event_category': 'engagement', 'event_label': 'cta_b2b_mentoria'})">
+      <a href="https://formulario-mentoria.amarileite.com.br" target="_blank" rel="noopener" class="b2b-cta" onclick="gtag('event', 'contact_click', {'event_category': 'engagement', 'event_label': 'cta_b2b_mentoria'})">
         Conversar sobre mentoria B2B
         <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
@@ -1335,7 +1337,7 @@ footer {
 <section class="cta-section">
   <h2 class="cta-title">Sua liderança já sabe o que quer ser.<br>A gente ajuda a chegar lá.</h2>
   <p class="cta-sub">Entre em contato descrevendo o momento da empresa. A proposta parte sempre de uma conversa diagnóstica — sem pacote pronto.</p>
-  <a href="mailto:contato@amarileite.com.br?subject=Proposta para empresa" class="cta-btn" onclick="gtag('event', 'contact_click', {'event_category': 'engagement', 'event_label': 'cta_bottom_empresas'})">
+  <a href="https://formulario-mentoria.amarileite.com.br" target="_blank" rel="noopener" class="cta-btn" onclick="gtag('event', 'contact_click', {'event_category': 'engagement', 'event_label': 'cta_bottom_empresas'})">
     Solicitar proposta
     <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
   </a>
