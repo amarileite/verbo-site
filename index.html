@@ -269,6 +269,8 @@ a { color: inherit; text-decoration: none; }
   min-height: 100vh;
 }
 .hero-photo {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -967,7 +969,7 @@ a { color: inherit; text-decoration: none; }
   .nav-links { display: none; }
   .nav-hamburger { display: flex; }
   .hero { grid-template-columns: 1fr; min-height: auto; }
-  .hero-right { height: 60vw; max-height: 480px; }
+  .hero-right { height: 60vw; max-height: 480px; min-height: 0; }
   .hero-left { padding: 7rem 2rem 3rem; }
   .tensao-inner { grid-template-columns: 1fr; gap: 3rem; }
   .tensao-photo-wrap { order: -1; }

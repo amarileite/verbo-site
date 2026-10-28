@@ -83,6 +83,7 @@ a { color: inherit; text-decoration: none; }
   overflow: hidden;
 }
 .sobre-hero-photo img {
+  position: absolute; inset: 0;
   width: 100%; height: 100%;
   object-fit: cover; object-position: center 15%;
 }
@@ -341,6 +342,7 @@ a { color: inherit; text-decoration: none; }
   .nav-hamburger { display: flex; }
   .sobre-hero { grid-template-columns: 1fr; }
   .sobre-hero-photo { height: 65vw; max-height: 480px; }
+  .sobre-hero-photo img { object-position: center 40%; }
   .sobre-hero-text { padding: 4rem 2rem 3rem; }
   .numeros-inner { grid-template-columns: repeat(2, 1fr); }
   .traj-section { grid-template-columns: 1fr; gap: 3rem; padding: 4rem 1.5rem; }
