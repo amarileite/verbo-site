@@ -203,8 +203,8 @@ a { color: inherit; text-decoration: none; }
   background: var(--surface);
   display: grid; grid-template-columns: 1fr 1fr;
 }
-.foto-frase-img { overflow: hidden; height: 480px; }
-.foto-frase-img img { width: 100%; height: 100%; object-fit: cover; object-position: 60% 30%; }
+.foto-frase-img { overflow: hidden; aspect-ratio: 3 / 2; }
+.foto-frase-img img { width: 100%; height: 100%; object-fit: cover; object-position: 60% 0%; }
 .foto-frase-text {
   background: var(--bordo);
   display: flex; flex-direction: column; justify-content: center;
@@ -348,7 +348,7 @@ a { color: inherit; text-decoration: none; }
   .traj-section { grid-template-columns: 1fr; gap: 3rem; padding: 4rem 1.5rem; }
   .traj-sticky { position: static; }
   .foto-frase { grid-template-columns: 1fr; }
-  .foto-frase-img { height: 60vw; max-height: 380px; }
+  .foto-frase-img { height: auto; max-height: none; }
   .formacao-grid { grid-template-columns: 1fr; }
   .midia-grid { grid-template-columns: 1fr; }
   .footer-top { grid-template-columns: 1fr 1fr; }

@@ -38,7 +38,7 @@
       "@type": "ProfessionalService",
       "@id": "https://amarileite.com.br/empresas#service",
       "name": "Verbo Educação para Empresas",
-      "description": "Desenvolvimento de lideranças para empresas: mentoria executiva B2B e workshops de liderança, governança, formação de sucessores e feedback.",
+      "description": "Desenvolvimento de lideranças para empresas: mentoria executiva B2B, palestras e workshops de liderança, governança, formação de sucessores, feedback e vendas complexas.",
       "provider": {
         "@type": "Person",
         "name": "Mariana Leite",
@@ -56,7 +56,8 @@
         {"@type":"ListItem","position":1,"name":"Workshop Liderança na Prática","url":"https://amarileite.com.br/workshop-lideranca"},
         {"@type":"ListItem","position":2,"name":"Workshop Governança para Líderes","url":"https://amarileite.com.br/workshop-governanca-para-lideres"},
         {"@type":"ListItem","position":3,"name":"Workshop Formação de Sucessores","url":"https://amarileite.com.br/workshop-formacao-de-sucessores"},
-        {"@type":"ListItem","position":4,"name":"Workshop Feedback","url":"https://amarileite.com.br/workshop-feedback"}
+        {"@type":"ListItem","position":4,"name":"Workshop Feedback","url":"https://amarileite.com.br/workshop-feedback"},
+        {"@type":"ListItem","position":5,"name":"Workshop Vendas Complexas","url":"https://amarileite.com.br/workshop-vendas-complexas"}
       ]
     },
     {
@@ -243,13 +244,14 @@ nav {
   position: relative;
   overflow: hidden;
   background: var(--areia);
+  min-height: 420px;
 }
 
 .hero-right img {
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+  inset: 2.5rem;
+  width: calc(100% - 5rem);
+  height: calc(100% - 5rem);
   object-fit: cover;
   object-position: 40% 20%;
 }
@@ -637,6 +639,26 @@ nav {
 }
 
 .workshop-link:hover { gap: 0.7rem; }
+
+.workshop-card--destaque { grid-column: 1 / -1; border-color: var(--terracota); }
+.workshop-card--destaque .workshop-tag { color: var(--terracota); }
+
+/* ─── PALESTRAS ──────────────────────────────────────────── */
+.palestras { background: var(--grafite); padding: clamp(4rem, 8vw, 7rem) 0; }
+.palestras-inner { max-width: 1200px; margin: 0 auto; padding: 0 clamp(1.5rem, 8vw, 5rem); }
+.palestras-head { max-width: 640px; }
+.palestras-title { font-family: var(--f-display); font-size: clamp(2rem, 4vw, 3rem); font-weight: 400; line-height: 1.1; color: #FBF6F2; }
+.palestras-title em { font-style: italic; color: var(--areia); }
+.palestras-body { margin-top: 1.25rem; font-size: 0.95rem; line-height: 1.75; color: rgba(217,195,179,0.85); }
+.palestras-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; margin-top: 3rem; background: rgba(217,195,179,0.18); border: 1px solid rgba(217,195,179,0.18); }
+.palestra-card { background: var(--grafite); padding: 2.25rem 2rem; }
+.palestra-num { font-family: var(--f-display); font-size: 1.1rem; color: var(--terracota); }
+.palestra-card h3 { font-family: var(--f-display); font-size: 1.45rem; font-weight: 500; line-height: 1.2; color: #FBF6F2; margin: 0.6rem 0 0.6rem; }
+.palestra-card p { font-size: 0.88rem; line-height: 1.7; color: rgba(217,195,179,0.75); }
+.palestras-foot { display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; flex-wrap: wrap; margin-top: 2.5rem; }
+.palestras-meta { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+.meta-pill--dark { background: transparent; color: rgba(217,195,179,0.85); border-color: rgba(217,195,179,0.3); }
+@media (max-width: 680px) { .palestras-grid { grid-template-columns: 1fr; } }
 
 /* ─── MENTORIA B2B ───────────────────────────────────────── */
 .mentoria-b2b {
@@ -1039,7 +1061,7 @@ footer {
     </h1>
     <div class="hero-divider"></div>
     <p class="hero-sub">
-      Workshops e mentoria para times e lideranças que precisam de mais do que teoria — precisam de transformação real, ancorada em contexto.
+      Workshops, palestras e mentoria para times e lideranças que precisam de mais do que teoria — precisam de transformação real, ancorada em contexto.
     </p>
     <div class="hero-stats">
       <div class="hero-stat">
@@ -1149,6 +1171,20 @@ footer {
     <h2 class="section-title">Workshops in company</h2>
     <p class="section-body">Todos customizáveis em carga horária, formato e profundidade. Começamos com diagnóstico antes de qualquer proposta.</p>
     <div class="workshops-grid">
+      <div class="workshop-card workshop-card--destaque">
+        <p class="workshop-tag">Workshop · Comercial</p>
+        <h3 class="workshop-name">Vendas Complexas</h3>
+        <p class="workshop-desc">Para times comerciais B2B com ciclos longos, vários decisores e tickets altos. Diagnóstico, mapa de stakeholders, business case, negociação com compras e previsibilidade de pipeline — com o repertório de quem levou o iFood Benefícios de zero a quase 1 milhão de vidas.</p>
+        <div class="workshop-meta">
+          <span class="meta-pill">4h – 8h</span>
+          <span class="meta-pill">Grupos de 4 a 20</span>
+          <span class="meta-pill">In company</span>
+        </div>
+        <a href="/workshop-vendas-complexas" class="workshop-link">
+          Ver programa
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
       <div class="workshop-card">
         <p class="workshop-tag">Workshop</p>
         <h3 class="workshop-name">Liderança na Prática</h3>
@@ -1205,6 +1241,50 @@ footer {
           <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── PALESTRAS ──────────────────────────────────────────── -->
+<section class="palestras" id="palestras">
+  <div class="palestras-inner">
+    <div class="palestras-head">
+      <p class="section-label">Palestras</p>
+      <h2 class="palestras-title">Leve a Mari para o<br><em>seu evento.</em></h2>
+      <p class="palestras-body">Palestras para convenções de vendas, kick-offs, semanas de liderança e eventos corporativos. Histórias reais de quem construiu e escalou operações em grandes empresas de tecnologia — sem fórmula pronta e sem palco de autoajuda.</p>
+    </div>
+    <div class="palestras-grid">
+      <div class="palestra-card">
+        <span class="palestra-num">01</span>
+        <h3>Crescer sem perder quem você é</h3>
+        <p>Carreira, ambição e identidade. Como ascender de verdade sem virar outra pessoa no caminho.</p>
+      </div>
+      <div class="palestra-card">
+        <span class="palestra-num">02</span>
+        <h3>De zero a quase 1 milhão de vidas</h3>
+        <p>Os bastidores de construir uma operação comercial do zero no iFood Benefícios: decisões, erros e o que realmente escala.</p>
+      </div>
+      <div class="palestra-card">
+        <span class="palestra-num">03</span>
+        <h3>Liderança na real</h3>
+        <p>O que ninguém conta quando você vira gestor: conversas difíceis, decisões com pouca informação e times que dependem de você.</p>
+      </div>
+      <div class="palestra-card">
+        <span class="palestra-num">04</span>
+        <h3>Vender quando a decisão não é de uma pessoa só</h3>
+        <p>Vendas complexas B2B: como ganhar comitês de compra, ciclos longos e negociações difíceis.</p>
+      </div>
+    </div>
+    <div class="palestras-foot">
+      <div class="palestras-meta">
+        <span class="meta-pill meta-pill--dark">45 – 90 min</span>
+        <span class="meta-pill meta-pill--dark">Presencial ou online</span>
+        <span class="meta-pill meta-pill--dark">Tema adaptado ao público</span>
+      </div>
+      <a href="https://formulario-mentoria.amarileite.com.br" target="_blank" rel="noopener" class="hero-cta" onclick="gtag('event', 'contact_click', {'event_category': 'engagement', 'event_label': 'cta_palestras_empresas'})">
+        Convidar para palestrar
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
     </div>
   </div>
 </section>
